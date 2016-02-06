@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.liferay.vaadin7.compatibilitypack</groupId>
+	<artifactId>org.liferay.vaadin7.compatibilitypack</artifactId>
+	<version>7.6.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<url>http://github.com/sammso/org.liferay.vaadin7.compatibilitypack</url>
+	<description>This project creates installation package to Vaadin 7 bundles to Liferay 7</description>
+	<properties>
+		<vaadin.version>7.6.1</vaadin.version>
+		<liferay.version>7.0.0-b6</liferay.version>
+		<maven-assembly-plugin.version>2.5.5</maven-assembly-plugin.version>
+		<org.osgi.compendium.version>5.0.0</org.osgi.compendium.version>
+		<org.osgi.core.version>6.0.0</org.osgi.core.version>
+		<bnd.version>3.1.0</bnd.version>
+	</properties>
+	<modules>
+		<module>org.liferay.vaadin7.compatibilitypack.webresources</module>
+		<module>org.liferay.vaadin7.compatibilitypack.distribution</module>
+	</modules>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.5</version>
+					<configuration>
+						<source>1.7</source>
+          				<target>1.7</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<repositories>
+		<repository>
+			<id>liferay-ce</id>
+			<name>Liferay CE</name>
+			<url>https://repository.liferay.com/nexus/content/groups/liferay-ce/</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>liferay-plugin</id>
+			<url>https://repository.liferay.com/nexus/content/groups/liferay-ce/</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<name>Vaadin 7 installation to Liferay 7</name>
+</project>
