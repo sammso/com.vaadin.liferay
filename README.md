@@ -1,4 +1,4 @@
-Liferay 7 / Vaadin 7 combatibility pack
+Liferay 7 / Vaadin 7 compatibility pack
 ===========================================
 
 Overview
