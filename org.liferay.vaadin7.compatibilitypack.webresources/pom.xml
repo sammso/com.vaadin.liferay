@@ -7,7 +7,7 @@
 		<version>7.6.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>org.liferay.vaadin7.compatibilitypack.webresources</artifactId>
-	<name>Vaadin 7 Web Resources</name>
+	<name>Vaadin 7 Web Resources - ${project.version}</name>
 	<description>Vaadin 7 Web Resources packaged as single bundle</description>
 	<build>
 		<finalName>${project.artifactId}.${project.version}</finalName>
