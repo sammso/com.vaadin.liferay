@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.liferay.vaadin7.compatibilitypack</groupId>
 		<artifactId>org.liferay.vaadin7.compatibilitypack</artifactId>
-		<version>7.6.1-SNAPSHOT</version>
+		<version>7.7.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>org.liferay.vaadin7.compatibilitypack.webresources</artifactId>
 	<name>Vaadin 7 Web Resources - ${project.version}</name>
