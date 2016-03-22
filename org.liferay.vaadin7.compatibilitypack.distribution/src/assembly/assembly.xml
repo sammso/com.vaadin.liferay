@@ -6,6 +6,15 @@
     </formats>
 	<includeBaseDirectory>false</includeBaseDirectory>
     <!-- Adds the dependencies of our application to the lib directory -->
+	<fileSets>
+	  <fileSet>
+	  	<directory>${project.basedir}/target/classes</directory>
+	  	<outputDirectory>/</outputDirectory>
+	  	<includes>
+        	<include>liferay-marketplace.properties</include>
+        </includes>
+	  </fileSet>
+	</fileSets>    
     <dependencySets>
         <dependencySet>
             <!--
