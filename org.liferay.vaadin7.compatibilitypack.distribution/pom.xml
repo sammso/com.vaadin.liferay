@@ -8,7 +8,7 @@
 		<relativePath>../</relativePath>
 	</parent>
 	<artifactId>org.liferay.vaadin7.compatibilitypack.distribution</artifactId>
-	<name>Vaadin 7 Liferay 7 assembly - ${project.version}</name>
+	<name>Vaadin Liferay compatiblitypack - ${project.version}</name>
 	<description>Vaadin 7 osgi installation to Liferay bundle</description>
 	<dependencies>
 		<dependency>
