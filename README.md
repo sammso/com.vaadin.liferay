@@ -21,24 +21,35 @@ mvn package
 cp org.liferay.vaadin7.compatibilitypack/target/org.liferay.vaadin7.compatibilitypack.distribution-<version>.lpkg -d <replace-this-to-your-liferay7-home>/deploy 
 ~~~
 
-Configuring Web Resources
+Creating Vaadin Portlet
 -------------------------
 
+Only thing that you need is to create UI Component
+
 ```java
-@Component(
-		immediate = true,
-		property = {
-			"com.liferay.portlet.display-category=category.<your category>",
-			"com.liferay.portlet.instanceable=true",
-			"javax.portlet.display-name=<your portlet name>",
-			"javax.portlet.init-param.UI=<your UI class name>",
-			"javax.portlet.security-role-ref=power-user,user",
-			VaadinWebResource.JAVAX_PORTLET_RESOURCES_PATH
-		},
-		service = javax.portlet.Portlet.class
-	)
-public class Portlet extends VaadinPortlet {
+
+@Component(scope = ServiceScope.PROTOTYPE, service = com.vaadin.ui.UI.class)
+public class CurrentUserUI extends com.vaadin.ui.UI {
+	@Override
+	protected void init(VaadinRequest request) {
+		try {
+			User user = _portal.getUser(
+				VaadinPortletService.getCurrentPortletRequest());
+			if (user==null) {
+				setContent(new Label("Non logged-in user change"));
+			}
+			else {
+				setContent(new Label("User change " + user.getFullName()));
+			}
+		} 
+		catch (PortalException e) {
+			_log.error(e);
+		}
+	}
+
+	private Log _log = LogFactoryUtil.getLog(CurrentUserUI.class);
+
+	@Reference(cardinality = ReferenceCardinality.MANDATORY)
+	private Portal _portal;
 }
 ```
-
-the VaadinWebResource.JAVAX_PORTLET_RESOURCES_PATH contains location of the required web resources of used Vaadin version.
