@@ -9,8 +9,7 @@ Include-Resource:\
 
 Web-ContextPath: /vaadin${vaadin.version}
 Export-Package: org.liferay.vaadin7.compatibilitypack.webresources
-Import-Package: \
-	VAADIN.*;version=${vaadin.version},\
-	*
+
+
 Bundle-Activator: org.liferay.vaadin7.compatibilitypack.VaadinActivator
 Private-Package: org.liferay.vaadin7.compatibilitypack
