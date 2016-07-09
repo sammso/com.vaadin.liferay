@@ -20,6 +20,7 @@
 		<module>distribution</module>
 		<module>osgi</module>
 		<module>compatibility</module>
+		<module>example</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
