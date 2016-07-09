@@ -23,7 +23,7 @@
             -->
             <useProjectArtifact>false</useProjectArtifact>
             <unpack>false</unpack>
-            <outputFileNameMapping>${artifact.groupId}.${artifact.artifactId}-${artifact.version}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.version}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>
         	<includes>
         		<include>com.vaadin:vaadin-server:</include>
         		<include>com.vaadin:vaadin-client-compiled:</include>
@@ -33,19 +33,8 @@
         		<include>com.vaadin.external.streamhtmlparser:streamhtmlparser-jsilver:</include>
         		<include>org.jsoup:jsoup:</include>
         		<include>com.vaadin.external.flute:flute:</include>
+        		<include>com.vaadin.liferay:com.vaadin.liferay.resources:</include>
         	</includes>
-        </dependencySet>
-        <dependencySet>
-            <!--
-                Project artifact is not copied under library directory since
-                it is added to the root directory of the zip package.
-            -->
-            <useProjectArtifact>false</useProjectArtifact>
-            <unpack>false</unpack>
-            <outputFileNameMapping>${artifact.artifactId}-${artifact.version}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>
-            <includes>
-                <include>org.liferay.vaadin7.compatibilitypack:</include>
-            </includes>
-        </dependencySet>        
+        </dependencySet>       
     </dependencySets>
 </assembly>

@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.liferay.vaadin7.compatibilitypack</groupId>
-	<artifactId>org.liferay.vaadin7.compatibilitypack</artifactId>
+	<groupId>com.vaadin.liferay</groupId>
+	<artifactId>com.vaadin.liferay</artifactId>
 	<version>7.7.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<url>http://github.com/sammso/org.liferay.vaadin7.compatibilitypack</url>
@@ -17,8 +17,8 @@
 		<bnd.version>3.2.0</bnd.version>
 	</properties>
 	<modules>
-		<module>org.liferay.vaadin7.compatibilitypack.webresources</module>
-		<module>org.liferay.vaadin7.compatibilitypack.distribution</module>
+		<module>resources</module>
+		<module>distribution</module>
 	</modules>
 	<build>
 		<pluginManagement>

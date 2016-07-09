@@ -1,4 +1,4 @@
-package org.liferay.vaadin7.compatibilitypack.webresources;
+package com.vaadin.liferay;
 
 /**
  * This class contains constant to find current resources

@@ -2,18 +2,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.liferay.vaadin7.compatibilitypack</groupId>
-		<artifactId>org.liferay.vaadin7.compatibilitypack</artifactId>
+		<groupId>com.vaadin.liferay</groupId>
+		<artifactId>com.vaadin.liferay</artifactId>
 		<version>7.7.0-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<artifactId>org.liferay.vaadin7.compatibilitypack.distribution</artifactId>
+	<artifactId>com.vaadin.liferay.distribution</artifactId>
 	<name>Vaadin Liferay compatiblitypack - ${project.version}</name>
 	<description>Vaadin 7 osgi installation to Liferay bundle</description>
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>org.liferay.vaadin7.compatibilitypack.webresources</artifactId>
+			<artifactId>com.vaadin.liferay.resources</artifactId>
 			<version>${project.version}</version>
 		</dependency>		
 		<!-- Vaadin archetypes -->

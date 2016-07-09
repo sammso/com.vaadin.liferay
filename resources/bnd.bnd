@@ -8,8 +8,12 @@ Include-Resource:\
 	META-INF/resources=target/generated-resources/META-INF/resources
 
 Web-ContextPath: /vaadin${vaadin.version}
-Export-Package: org.liferay.vaadin7.compatibilitypack.webresources
+
+Export-Package: \
+	com.vaadin.liferay, \
+	com.vaadin.osgi.portlet, \
+	com.vaadin.osgi
 
 
-Bundle-Activator: org.liferay.vaadin7.compatibilitypack.VaadinActivator
-Private-Package: org.liferay.vaadin7.compatibilitypack
+Bundle-Activator: com.vaadin.liferay.activator.VaadinActivator
+Private-Package: com.vaadin.liferay.activator

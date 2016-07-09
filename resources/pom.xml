@@ -2,13 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.liferay.vaadin7.compatibilitypack</groupId>
-		<artifactId>org.liferay.vaadin7.compatibilitypack</artifactId>
+		<groupId>com.vaadin.liferay</groupId>
+		<artifactId>com.vaadin.liferay</artifactId>
 		<version>7.7.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>org.liferay.vaadin7.compatibilitypack.webresources</artifactId>
-	<name>Vaadin 7 Web Resources - ${project.version}</name>
-	<description>Vaadin 7 Web Resources packaged as single bundle</description>
+	<artifactId>com.vaadin.liferay.resources</artifactId>
+	<name>Vaadin 7 Default Web Resources - ${project.version}</name>
+	<description>Vaadin 7 Default Web Resources</description>
 	<build>
 		<finalName>${project.artifactId}.${project.version}</finalName>
 		<resources>
