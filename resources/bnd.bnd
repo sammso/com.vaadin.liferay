@@ -11,7 +11,3 @@ Web-ContextPath: /vaadin${vaadin.version}
 
 Export-Package: \
 	com.vaadin.liferay
-
-
-Bundle-Activator: com.vaadin.liferay.activator.VaadinActivator
-Private-Package: com.vaadin.liferay.activator
