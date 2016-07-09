@@ -19,7 +19,80 @@
 	<modules>
 		<module>resources</module>
 		<module>distribution</module>
+		<module>osgi</module>
+		<module>compatibility</module>
 	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>biz.aQute.bndlib</artifactId>
+				<version>2.4.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.liferay.portal</groupId>
+				<artifactId>com.liferay.portal.kernel</artifactId>
+				<version>[2.0.0,3.0.0)</version>
+			</dependency>
+			<dependency>
+				<groupId>com.liferay</groupId>
+				<artifactId>com.liferay.arquillian.extension.junit.bridge</artifactId>
+				<version>1.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vaadin</groupId>
+				<artifactId>vaadin-server</artifactId>
+				<version>${vaadin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vaadin</groupId>
+				<artifactId>liferay-compatiblity</artifactId>
+				<version>${vaadin.version}</version>
+			</dependency>	
+			<dependency>
+				<groupId>javax.portlet</groupId>
+				<artifactId>portlet-api</artifactId>
+				<version>2.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-core</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.osgi</groupId>
+				<artifactId>org.osgi.service.component.annotations</artifactId>
+				<version>1.3.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.osgi</groupId>
+				<artifactId>org.osgi.core</artifactId>
+				<version>6.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.7</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-simple</artifactId>
+				<version>1.7.7</version>
+			</dependency>
+			<dependency>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>biz.aQute.bnd.annotation</artifactId>
+				<version>2.4.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<build>
 		<pluginManagement>
 			<plugins>

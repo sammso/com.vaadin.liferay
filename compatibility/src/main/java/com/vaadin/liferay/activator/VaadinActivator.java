@@ -75,7 +75,7 @@ public class VaadinActivator implements BundleActivator,
 		
 		copyProperty(
 			uiServiceReference, properties, 
-			"com.liferay.portlet.display-category", "category.sample");
+			"com.liferay.portlet.display-category", "category.vaadin");
 	
 		copyProperty(
 			uiServiceReference, properties,

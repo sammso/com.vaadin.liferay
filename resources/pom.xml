@@ -7,8 +7,8 @@
 		<version>7.7.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>com.vaadin.liferay.resources</artifactId>
-	<name>Vaadin 7 Default Web Resources - ${project.version}</name>
-	<description>Vaadin 7 Default Web Resources</description>
+	<name>Vaadin Default Web Resources - ${project.version}</name>
+	<description>Vaadin Default Web Resources</description>
 	<build>
 		<finalName>${project.artifactId}.${project.version}</finalName>
 		<resources>
