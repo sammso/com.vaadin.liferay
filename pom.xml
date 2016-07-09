@@ -17,10 +17,10 @@
 	</properties>
 	<modules>
 		<module>resources</module>
-		<module>distribution</module>
 		<module>osgi</module>
 		<module>compatibility</module>
 		<module>example</module>
+		<module>distribution</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
