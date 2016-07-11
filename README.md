@@ -1,4 +1,4 @@
-Liferay 7 / Vaadin 7 compatibility pack
+Vaadin/ Liferay DXP / 7.0 compatibility pack
 ===========================================
 
 Overview
@@ -8,7 +8,7 @@ As Liferay 7 does not have Vaadin 7 included, this project provides minimilastic
 Requirements:
 -------------
 - Java 7 and Maven 
-- Liferay Portal 7 (latest)
+- Liferay DXP / 7.0 (latest)
 
 To compile:
 -----------
@@ -17,14 +17,18 @@ To compile:
 mvn package
 ~~~
 
+*Note due the latest changes at Liferay 7.0 / DXP following deployment package is not complete to be deployed.*
+
 ~~~
-cp org.liferay.vaadin7.compatibilitypack/target/org.liferay.vaadin7.compatibilitypack.distribution-<version>.lpkg -d <replace-this-to-your-liferay7-home>/deploy 
+cp org.liferay.vaadin7.compatibilitypack/target/com.vaadin.liferay.distribution-<version>.lpkg -d <replace-this-to-your-liferay7-home>/deploy 
 ~~~
+
+To workaround you need to unzip the ``com.vaadin.liferay.distribution-<version>.lpkg`` and copy to the results to ``<liferay-home>/osgi/modules`` folder.
 
 Creating Vaadin Portlet
 -------------------------
 
-Only thing that you need is to create UI Component
+Only thing that you need is to create UI Component. 
 
 ```java
 
@@ -53,3 +57,5 @@ public class CurrentUserUI extends com.vaadin.ui.UI {
 	private Portal _portal;
 }
 ```
+
+Example of this you can find from ``example``folder.
