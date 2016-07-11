@@ -26,14 +26,14 @@
             <outputFileNameMapping>${artifact.artifactId}-${artifact.version}${dashClassifier?}.${artifact.extension}</outputFileNameMapping>
         	<includes>
         		<include>com.vaadin:vaadin-server:</include>
-        		<include>com.vaadin:vaadin-client-compiled:</include>
         		<include>com.vaadin:vaadin-shared:</include>
-        		<include>com.vaadin:vaadin-themes:</include>
         		<include>com.vaadin.external.google:</include>
         		<include>com.vaadin.external.streamhtmlparser:streamhtmlparser-jsilver:</include>
         		<include>org.jsoup:jsoup:</include>
         		<include>com.vaadin.external.flute:flute:</include>
         		<include>com.vaadin.liferay:com.vaadin.liferay.resources:</include>
+        		<include>com.vaadin.liferay:com.vaadin.liferay.compatibility:</include>
+        		<include>com.vaadin.osgi:com.vaadin.osgi:</include>
         	</includes>
         </dependencySet>       
     </dependencySets>
