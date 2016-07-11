@@ -14,21 +14,21 @@
 			<groupId>${project.groupId}</groupId>
 			<artifactId>com.vaadin.liferay.resources</artifactId>
 			<version>${project.version}</version>
-		</dependency>		
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin.osgi</groupId>
+			<artifactId>com.vaadin.osgi</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin.liferay</groupId>
+			<artifactId>com.vaadin.liferay.compatibility</artifactId>
+			<version>${project.version}</version>
+		</dependency>					
 		<!-- Vaadin archetypes -->
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-server</artifactId>
-			<version>${vaadin.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-client-compiled</artifactId>
-			<version>${vaadin.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-themes</artifactId>
 			<version>${vaadin.version}</version>
 		</dependency>
 		<!-- Vaadin dependencies -->
@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
-			<version>1.8.1</version>
+			<version>1.8.3</version>
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin.external.flute</groupId>
