@@ -71,7 +71,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>com.vaadin.osgi</artifactId>
+			<artifactId>com.vaadin.liferay.osgi</artifactId>
 			<version>${project.version}</version>
 			<scope>provided</scope>	
 		</dependency>

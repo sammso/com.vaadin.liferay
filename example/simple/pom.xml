@@ -35,7 +35,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin.liferay</groupId>
-			<artifactId>com.vaadin.liferay.compatiblity</artifactId>
+			<artifactId>com.vaadin.liferay.compatibility</artifactId>
 			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
