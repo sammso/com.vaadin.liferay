@@ -16,8 +16,8 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.vaadin.osgi</groupId>
-			<artifactId>com.vaadin.osgi</artifactId>
+			<groupId>com.vaadin..liferay</groupId>
+			<artifactId>com.vaadin.liferay.osgi</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
