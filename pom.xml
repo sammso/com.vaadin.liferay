@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vaadin.liferay</groupId>
 	<artifactId>com.vaadin.liferay</artifactId>
-	<version>7.7.0-SNAPSHOT</version>
+	<version>7.7.0</version>
 	<packaging>pom</packaging>
 	<url>http://github.com/sammso/com.vaadin.liferay</url>
 	<description>This project creates installation package to Vaadin bundles to Liferay DXP/7</description>
