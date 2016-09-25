@@ -1,4 +1,4 @@
-package com.vaadin.osgi.portlet;
+package com.vaadin.osgi.liferay;
 
 import java.util.ArrayList;
 import java.util.List;

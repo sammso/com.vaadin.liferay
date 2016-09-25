@@ -1,4 +1,11 @@
-package com.vaadin.liferay.activator;
+package com.vaadin.osgi.liferay.activator;
+
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.vaadin.liferay.VaadinWebResource;
+import com.vaadin.osgi.liferay.OSGiUIProvider;
+import com.vaadin.osgi.liferay.VaadinOSGiPortlet;
+import com.vaadin.ui.UI;
 
 import java.util.Dictionary;
 import java.util.HashMap;
@@ -7,10 +14,6 @@ import java.util.Iterator;
 import java.util.Map;
 
 import javax.portlet.Portlet;
-
-import com.vaadin.liferay.VaadinWebResource;
-import com.vaadin.osgi.portlet.VaadinOSGiPortlet;
-import com.vaadin.osgi.OSGiUIProvider;
 
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleActivator;
@@ -21,10 +24,6 @@ import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.util.tracker.ServiceTracker;
 import org.osgi.util.tracker.ServiceTrackerCustomizer;
-
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.vaadin.ui.UI;
 
 public class VaadinActivator implements BundleActivator, 
 	ServiceTrackerCustomizer<UI, UI> {

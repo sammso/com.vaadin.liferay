@@ -71,12 +71,6 @@
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>com.vaadin.liferay.osgi</artifactId>
-			<version>${project.version}</version>
-			<scope>provided</scope>	
-		</dependency>
-			<dependency>
-			<groupId>${project.groupId}</groupId>
 			<artifactId>com.vaadin.liferay.resources</artifactId>
 			<version>${project.version}</version>
 			<scope>provided</scope>	

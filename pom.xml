@@ -17,7 +17,6 @@
 	</properties>
 	<modules>
 		<module>resources</module>
-		<module>osgi</module>
 		<module>compatibility</module>
 		<module>example</module>
 		<module>distribution</module>

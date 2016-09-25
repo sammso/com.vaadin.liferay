@@ -1,4 +1,4 @@
-package com.vaadin.osgi;
+package com.vaadin.osgi.liferay;
 
 import org.osgi.framework.ServiceObjects;
 
