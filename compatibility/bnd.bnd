@@ -4,8 +4,4 @@ Bundle-SymbolicName: ${project.artifactId}
 Bundle-Version: ${project.version}
 Bundle-Description: ${project.description}
 
-Bundle-Activator: com.vaadin.osgi.liferay.activator.VaadinActivator
-Private-Package: \
-	com.vaadin.osgi.liferay.activator,\
-	com.vaadin.liferay,\
-	com.vaadin.osgi.liferay
+Private-Package: com.vaadin.liferay

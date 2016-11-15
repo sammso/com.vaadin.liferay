@@ -9,5 +9,4 @@ Include-Resource:\
 
 Web-ContextPath: /vaadin${vaadin.version}
 
-Export-Package: \
-	com.vaadin.liferay
+Export-Package: com.vaadin.osgi.liferay.resources

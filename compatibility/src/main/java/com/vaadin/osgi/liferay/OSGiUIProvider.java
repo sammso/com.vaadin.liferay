@@ -1,7 +1,5 @@
 package com.vaadin.osgi.liferay;
 
-import org.osgi.framework.ServiceObjects;
-
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.vaadin.server.ClientConnector.DetachEvent;
@@ -10,6 +8,8 @@ import com.vaadin.server.UIClassSelectionEvent;
 import com.vaadin.server.UICreateEvent;
 import com.vaadin.server.UIProvider;
 import com.vaadin.ui.UI;
+
+import org.osgi.framework.ServiceObjects;
 
 public class OSGiUIProvider extends UIProvider {
 	public OSGiUIProvider(ServiceObjects<UI> serviceObjects) {
