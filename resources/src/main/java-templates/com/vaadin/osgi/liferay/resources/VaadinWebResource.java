@@ -1,4 +1,4 @@
-package com.vaadin.liferay;
+package com.vaadin.osgi.liferay.resources;
 
 /**
  * This class contains constant to find current resources
