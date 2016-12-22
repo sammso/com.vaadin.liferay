@@ -5,6 +5,7 @@ import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.util.Portal;
+import com.vaadin.osgi.liferay.resources.VaadinWebResource;
 import com.vaadin.server.VaadinPortletService;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Label;
@@ -14,7 +15,14 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ServiceScope;
 
-@Component(scope = ServiceScope.PROTOTYPE, service = com.vaadin.ui.UI.class)
+@Component(
+	scope = ServiceScope.PROTOTYPE, 
+	service = com.vaadin.ui.UI.class, 
+	property = {
+		"javax.portlet.portlet-name=current-user-" + VaadinWebResource.VAADIN_VERSION,
+		"javax.portlet.display-name=Current User " + VaadinWebResource.VAADIN_VERSION,
+	}
+)
 public class CurrentUserUI extends com.vaadin.ui.UI {
     @Override
     protected void init(VaadinRequest request) {
