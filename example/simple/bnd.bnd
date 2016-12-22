@@ -7,5 +7,4 @@ Bundle-Description: ${project.description}
 -dsannotations: *
 Bundle-Version: ${project.version}
 
-impor: 
-Import-Package: com.vaadin.server;version="${project.version}",com.vaadin.ui;version="${project.version}",*
+Import-Package: com.vaadin.server;version="${project.version}",com.vaadin.ui;version="${project.version}",com.vaadin.osgi.liferay.resources;version="${project.version}"
