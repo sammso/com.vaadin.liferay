@@ -5,3 +5,9 @@ Bundle-Version: ${project.version}
 Bundle-Description: ${project.description}
 
 Private-Package: com.vaadin.liferay
+
+Import-Package: \\
+	com.vaadin.ui;version="${project.version}",\\
+	com.vaadin.server;version="${project.version}",\\
+	com.vaadin.osgi.liferay.resources;version="${project.version}",\\
+	*
