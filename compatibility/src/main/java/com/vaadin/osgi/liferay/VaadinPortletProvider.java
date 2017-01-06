@@ -88,8 +88,6 @@ public class VaadinPortletProvider {
 				uiServiceReference, properties, 
 				VaadinWebResource.JAVAX_PORTLET_RESOURCES_INIT_PARAM, 
 				VaadinWebResource.JAVAX_PORTLET_RESOURCES_INIT_VALUE);
-			
-			Class uiClass = osgiUIProvider.getUIClass(null);
 		
 			ServiceRegistration<Portlet> serviceRegistration = 
 				bundleContext.registerService(
