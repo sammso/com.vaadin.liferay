@@ -8,7 +8,7 @@ Bundle-Description: ${project.description}
 Bundle-Version: ${project.version}
 
 Import-Package:\\
-	com.vaadin.server;version="${project.version}",\\
-	com.vaadin.ui;version="${project.version}",\\
+	com.vaadin.server;version="${vaadin.version}",\\
+	com.vaadin.ui;version="${vaadin.version}",\\
 	com.vaadin.osgi.liferay.resources;version="${project.version}",\\
 	*
