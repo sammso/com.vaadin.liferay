@@ -6,8 +6,17 @@ Bundle-Description: ${project.description}
 
 Private-Package: com.vaadin.liferay
 
+#
+# Web-ContextPath: and Web-ContextName: are required to make different Vaadin version installations to work same time
+#
+Web-ContextPath: /vaadinbridge${project.version}
+Web-ContextName: vaadinbridge${project.version}
+
+#
+# As there can be several version of Vaadin's installed to same container the version has to be specified
+#
 Import-Package: \\
-	com.vaadin.ui;version="${project.version}",\\
-	com.vaadin.server;version="${project.version}",\\
+	com.vaadin.ui;version="${vaadin.version}",\\
+	com.vaadin.server;version="${vaadin.version}",\\
 	com.vaadin.osgi.liferay.resources;version="${project.version}",\\
 	*
