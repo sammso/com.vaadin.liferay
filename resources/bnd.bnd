@@ -1,12 +1,12 @@
 Bundle-Name: ${project.name}
 Bundle-Description: ${project.description}
 Bundle-SymbolicName: ${project.artifactId}
-Bundle-Version: ${project.version}
+Bundle-Version: ${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}
 Bundle-Description: ${project.description}
 
 Include-Resource:\
 	META-INF/resources=target/generated-resources/META-INF/resources
 
-Web-ContextPath: /vaadin${vaadin.version}
+Web-ContextPath: /vaadin${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}
 
 Export-Package: com.vaadin.osgi.liferay.resources

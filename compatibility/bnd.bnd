@@ -1,7 +1,7 @@
 Bundle-Name: ${project.name}
 Bundle-Description: ${project.description}
 Bundle-SymbolicName: ${project.artifactId}
-Bundle-Version: ${project.version}
+Bundle-Version: ${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}
 Bundle-Description: ${project.description}
 
 Private-Package: com.vaadin.liferay
@@ -16,7 +16,8 @@ Web-ContextName: vaadinbridge${project.version}
 # As there can be several version of Vaadin's installed to same container the version has to be specified
 #
 Import-Package: \\
-	com.vaadin.ui;version="${vaadin.version}",\\
-	com.vaadin.server;version="${vaadin.version}",\\
-	com.vaadin.osgi.liferay.resources;version="${project.version}",\\
+	com.vaadin.ui;version="${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}",\\
+	com.vaadin.shared;version="${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}",\\
+	com.vaadin.server;version="${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}",\\
+	com.vaadin.osgi.liferay.resources;version="${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}",\\
 	*

@@ -1,5 +1,5 @@
 Bundle-Name: ${project.name}
-Bundle-Version: ${project.version}
+Bundle-Version: ${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}
 Bundle-SymbolicName: ${project.artifactId}
 Bundle-Name: ${project.name}
 Bundle-Description: ${project.description}
@@ -8,7 +8,7 @@ Bundle-Description: ${project.description}
 Bundle-Version: ${project.version}
 
 Import-Package:\\
-	com.vaadin.server;version="${vaadin.version}",\\
-	com.vaadin.ui;version="${vaadin.version}",\\
-	com.vaadin.osgi.liferay.resources;version="${project.version}",\\
+	com.vaadin.server;version="${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}",\\
+	com.vaadin.ui;version="${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}",\\
+	com.vaadin.osgi.liferay.resources;version="${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}",\\
 	*

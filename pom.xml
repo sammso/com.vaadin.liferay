@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vaadin.liferay</groupId>
 	<artifactId>com.vaadin.liferay</artifactId>
-	<version>7.7.6</version>
+	<version>8.0.0.beta1</version>
 	<packaging>pom</packaging>
 	<url>http://github.com/sammso/com.vaadin.liferay</url>
 	<description>This project creates installation package to Vaadin bundles to Liferay DXP/7</description>
 	<properties>
-		<vaadin.version>7.7.6</vaadin.version>
+		<vaadin.version>8.0.0.beta1</vaadin.version>
 		<maven-assembly-plugin.version>2.5.5</maven-assembly-plugin.version>
 		<org.osgi.core.version>6.0.0</org.osgi.core.version>
 		<org.osgi.service.component.version>1.3.0</org.osgi.service.component.version>
@@ -144,14 +144,14 @@
 	</build>
 	<repositories>
 		<repository>
+			<id>vaadin-maven</id>
+			<name>Vaadin Maven</name>
+			<url>https://maven.vaadin.com/vaadin-prereleases/</url>
+		</repository>
+		<repository>
 			<id>liferay-ce</id>
 			<name>Liferay CE</name>
 			<url>https://repository.liferay.com/nexus/content/groups/liferay-ce/</url>
-		</repository>
-		<repository>
-			<id>vaadin-maven</id>
-			<name>Vaadin Maven</name>
-			<url>https://maven.vaadin.com/vaadin-prereleases</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
