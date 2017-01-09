@@ -149,9 +149,9 @@
 			<url>https://repository.liferay.com/nexus/content/groups/liferay-ce/</url>
 		</repository>
 		<repository>
-			<id>vaadin-snapshot</id>
-			<name>Vaadin Snapshot</name>
-			<url>https://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
+			<id>vaadin-maven</id>
+			<name>Vaadin Maven</name>
+			<url>https://maven.vaadin.com/vaadin-prereleases</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
