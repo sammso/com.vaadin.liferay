@@ -98,8 +98,9 @@ public class VaadinPortletProvider {
 				uiServiceReference, serviceRegistration);
 			
 			if (_log.isDebugEnabled()) {
+				
 				_log.debug(
-					"portlet created for " + 
+					"Vaadin " + bundle.getVersion() + " portlet created for " + 
 						osgiUIProvider.getUIClass(null).getName());
 			}
 			
