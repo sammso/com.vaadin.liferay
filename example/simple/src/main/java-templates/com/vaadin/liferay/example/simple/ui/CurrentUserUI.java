@@ -15,15 +15,16 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ServiceScope;
 
+
 @Component(
 	scope = ServiceScope.PROTOTYPE, 
 	service = com.vaadin.ui.UI.class, 
 	property = {
-		"javax.portlet.portlet-name=current-user-" + VaadinWebResource.VAADIN_VERSION,
-		"javax.portlet.display-name=Current User " + VaadinWebResource.VAADIN_VERSION,
+		"javax.portlet.portlet-name=current-user-${project.version}",
+		"javax.portlet.display-name=Current User ${project.version}",
 	}
 )
-public class CurrentUserUI extends com.vaadin.ui.UI {
+public class CurrentUserUI${project.artifact.selectedVersion.majorVersion}_${project.artifact.selectedVersion.minorVersion}_${project.artifact.selectedVersion.incrementalVersion} extends com.vaadin.ui.UI {
     @Override
     protected void init(VaadinRequest request) {
         try {
@@ -41,7 +42,7 @@ public class CurrentUserUI extends com.vaadin.ui.UI {
         }
     }
 
-    private Log _log = LogFactoryUtil.getLog(CurrentUserUI.class);
+    private Log _log = LogFactoryUtil.getLog(CurrentUserUI${project.artifact.selectedVersion.majorVersion}_${project.artifact.selectedVersion.minorVersion}_${project.artifact.selectedVersion.incrementalVersion}.class);
 
     @Reference(cardinality = ReferenceCardinality.MANDATORY)
     private Portal _portal;
