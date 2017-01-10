@@ -5,7 +5,7 @@ package com.vaadin.osgi.liferay.resources;
  * @author Sampsa Sohlman
  */
 public abstract class VaadinWebResource {
-	public static final String VAADIN_VERSION = "${vaadin.version}";
+	public static final String VAADIN_VERSION = "${project.artifact.selectedVersion.majorVersion}.${project.artifact.selectedVersion.minorVersion}.${project.artifact.selectedVersion.incrementalVersion}";
 	public static final String JAVAX_PORTLET_RESOURCES_INIT_PARAM = 
 		"javax.portlet.init-param.vaadin.resources.path";
 	public static final String JAVAX_PORTLET_RESOURCES_INIT_VALUE = 
