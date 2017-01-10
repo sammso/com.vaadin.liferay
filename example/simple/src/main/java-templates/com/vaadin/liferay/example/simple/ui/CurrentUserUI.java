@@ -23,17 +23,17 @@ import org.osgi.service.component.annotations.ServiceScope;
 		"javax.portlet.display-name=Current User ${project.version}"
 	}
 )
-public class CurrentUserUI${project.artifact.selectedVersion.majorVersion}_${project.artifact.selectedVersion.minorVersion}_${project.artifact.selectedVersion.incrementalVersion} extends com.vaadin.ui.UI {
+public class CurrentUserUI${project.artifact.selectedVersion.majorVersion}v${project.artifact.selectedVersion.minorVersion}v${project.artifact.selectedVersion.incrementalVersion} extends com.vaadin.ui.UI {
     @Override
     protected void init(VaadinRequest request) {
         try {
             User user = _portal.getUser(
                 VaadinPortletService.getCurrentPortletRequest());
             if (user==null) {
-                setContent(new Label("Non logged-in user change"));
+                setContent(new Label("Non logged-in user change s"));
             }
             else {
-                setContent(new Label("User change " + user.getFullName()));
+                setContent(new Label("User change s " + user.getFullName()));
             }
         } 
         catch (PortalException e) {
@@ -41,7 +41,7 @@ public class CurrentUserUI${project.artifact.selectedVersion.majorVersion}_${pro
         }
     }
 
-    private Log _log = LogFactoryUtil.getLog(CurrentUserUI${project.artifact.selectedVersion.majorVersion}_${project.artifact.selectedVersion.minorVersion}_${project.artifact.selectedVersion.incrementalVersion}.class);
+    private Log _log = LogFactoryUtil.getLog(CurrentUserUI${project.artifact.selectedVersion.majorVersion}v${project.artifact.selectedVersion.minorVersion}v${project.artifact.selectedVersion.incrementalVersion}.class);
 
     @Reference(cardinality = ReferenceCardinality.MANDATORY)
     private Portal _portal;
