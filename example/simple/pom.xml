@@ -91,7 +91,7 @@
 						</goals>
 						<configuration>
 							<sourceFile>${project.build.directory}/generated-sources/java-templates/com/vaadin/liferay/example/simple/ui/CurrentUserUI.java</sourceFile>
-							<destinationFile>${project.build.directory}/generated-sources/java-templates/com/vaadin/liferay/example/simple/ui/CurrentUserUI${project.artifact.selectedVersion.majorVersion}_${project.artifact.selectedVersion.minorVersion}_${project.artifact.selectedVersion.incrementalVersion}.java</destinationFile>
+							<destinationFile>${project.build.directory}/generated-sources/java-templates/com/vaadin/liferay/example/simple/ui/CurrentUserUI${project.artifact.selectedVersion.majorVersion}v${project.artifact.selectedVersion.minorVersion}v${project.artifact.selectedVersion.incrementalVersion}.java</destinationFile>
 							</configuration>
 					</execution>
 				</executions>
