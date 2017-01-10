@@ -20,8 +20,7 @@ import org.osgi.service.component.annotations.ServiceScope;
 	scope = ServiceScope.PROTOTYPE, 
 	service = com.vaadin.ui.UI.class, 
 	property = {
-		"javax.portlet.portlet-name=current-user-${project.version}",
-		"javax.portlet.display-name=Current User ${project.version}",
+		"javax.portlet.display-name=Current User ${project.version}"
 	}
 )
 public class CurrentUserUI${project.artifact.selectedVersion.majorVersion}_${project.artifact.selectedVersion.minorVersion}_${project.artifact.selectedVersion.incrementalVersion} extends com.vaadin.ui.UI {
