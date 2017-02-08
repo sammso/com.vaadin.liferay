@@ -1,51 +1,38 @@
 package com.vaadin.osgi.liferay;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.portlet.PortletException;
-
-import com.vaadin.server.DefaultUIProvider;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.vaadin.server.DeploymentConfiguration;
 import com.vaadin.server.ServiceException;
-import com.vaadin.server.SessionInitEvent;
-import com.vaadin.server.SessionInitListener;
-import com.vaadin.server.UIProvider;
 import com.vaadin.server.VaadinPortlet;
-import com.vaadin.server.VaadinSession;
+import com.vaadin.server.VaadinPortletService;
 
 public class VaadinOSGiPortlet extends VaadinPortlet {
-	public VaadinOSGiPortlet(UIProvider uiProvider) {
-		_uUiProvider = uiProvider;
+
+	public VaadinOSGiPortlet(OSGiUIProvider uiProvider) {
+		_uiProvider = uiProvider;
 	}
-	
+
 	@Override
-	protected void portletInitialized() throws PortletException {
-        getService().addSessionInitListener(new SessionInitListener() {
+	protected VaadinPortletService createPortletService(
+			DeploymentConfiguration deploymentConfiguration)
+		throws ServiceException {
+		
+		try {
 
-			private static final long serialVersionUID = 1737347072701619179L;
+			OSGiVaadinPortletService osgiVaadinPortletService = 
+				new OSGiVaadinPortletService(this, deploymentConfiguration,
+					_uiProvider);
+			
+			osgiVaadinPortletService.init();
 
-			@Override
-            public void sessionInit(SessionInitEvent sessionInitEvent)
-                    throws ServiceException {
-				
-				// Implementation is copied from vaadin-spring
-				
-                VaadinSession session = sessionInitEvent.getSession();
-                List<UIProvider> uiProviders = new ArrayList<UIProvider>(
-                        session.getUIProviders());
-                for (UIProvider provider : uiProviders) {
-                    // use canonical names as these may have been loaded with
-                    // different classloaders
-                    if (DefaultUIProvider.class.getCanonicalName().equals(
-                            provider.getClass().getCanonicalName())) {
-                        session.removeUIProvider(provider);
-                    }
-                }
-                
-                session.addUIProvider(_uUiProvider);
-            }
-        });
+			return osgiVaadinPortletService;
+		} catch (Exception e) {
+			_log.error(e);
+			throw e;
+		}
 	}
-	
-	private UIProvider _uUiProvider;
+
+	private OSGiUIProvider _uiProvider;
+	private Log _log = LogFactoryUtil.getLog(VaadinOSGiPortlet.class);
 }

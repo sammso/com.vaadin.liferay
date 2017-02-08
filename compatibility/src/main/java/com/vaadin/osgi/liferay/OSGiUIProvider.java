@@ -12,11 +12,14 @@ import com.vaadin.ui.UI;
 import org.osgi.framework.ServiceObjects;
 
 public class OSGiUIProvider extends UIProvider {
+	
 	public OSGiUIProvider(ServiceObjects<UI> serviceObjects) {
 		super();
 		_serviceObjects = serviceObjects;
-		_ui = serviceObjects.getService();
-		_uiClass = (Class<UI>)_ui.getClass();
+		// How to find out better way to register
+		UI ui = serviceObjects.getService();
+		_uiClass = (Class<UI>)ui.getClass();
+		serviceObjects.ungetService(ui);
 	}
 
 	@Override
@@ -29,6 +32,9 @@ public class OSGiUIProvider extends UIProvider {
 		final ServiceObjects<UI> serviceObjects = _serviceObjects;
 		final UI ui = serviceObjects.getService();
 		
+		if (_log.isDebugEnabled()) {
+			_log.debug("unregistered UI " + ui.toString());
+		}
 		ui.addDetachListener(new DetachListener() {
 			@Override
 			public void detach(DetachEvent event) {
@@ -39,10 +45,6 @@ public class OSGiUIProvider extends UIProvider {
 			}
 		} );
 		return ui;
-	}
-	
-	public UI getDefaultUI() {
-		return _ui;
 	}
 	
 	public String getDefaultDisplayName() {
@@ -62,5 +64,4 @@ public class OSGiUIProvider extends UIProvider {
 	private Log _log = LogFactoryUtil.getLog(OSGiUIProvider.class);
 	private ServiceObjects<UI> _serviceObjects;
 	private Class<UI> _uiClass;
-	private UI _ui;
 }
