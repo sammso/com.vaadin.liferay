@@ -30,12 +30,12 @@ public class CurrentUserUI${project.artifact.selectedVersion.majorVersion}v${pro
             User user = _portal.getUser(
                 VaadinPortletService.getCurrentPortletRequest());
             if (user==null) {
-                setContent(new Label("Non logged-in user change s"));
+                setContent(new Label("Non logged-in user"));
             }
             else {
-                setContent(new Label("User change s " + user.getFullName()));
+                setContent(new Label("The user full name: " + user.getFullName()));
             }
-        } 
+        }
         catch (PortalException e) {
             _log.error(e);
         }
